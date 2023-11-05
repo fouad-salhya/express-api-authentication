@@ -1,9 +1,14 @@
 import express from 'express'
 import dotenv from 'dotenv'
+import bodyParser from 'body-parser'
 
 const app = express()
 dotenv.config()
 
+
+// middlewares
+app.use(express.json())
+app.use(bodyParser.json())
 
 
 // server
